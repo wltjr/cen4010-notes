@@ -1,0 +1,557 @@
+\documentclass{article}
+    \title{\textbf{CEN4010 - Notes}}
+    \author{}
+    \date{}
+    \usepackage[tmargin=1in,lmargin=1in,rmargin=1in,bmargin=1in]{geometry}
+    \usepackage[T1]{fontenc}
+	\usepackage{titlesec}
+	\usepackage{tikz}
+    \usepackage{makecell}
+    \usepackage{longtable}
+    \renewcommand{\familydefault}{\sfdefault}        	 
+    \renewcommand\theadfont{\bfseries\sffamily}
+    
+    \titleformat{\chapter}
+	{\Large\bfseries}
+	{\thechapter.}{0.5em}{}
+	
+	\titleformat{\section}
+	{\Large\bfseries}
+	{\thesection.}{0.5em}{}
+	
+	\titleformat{\subsection}
+	{\large\bfseries}
+	{\thesection.}{0.5em}{}
+	
+    \newcommand{\comment}[1]{}
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\chapter{Introduction 2}
+\section{Software engineering}
+\vspace{-8pt}
+\begin{itemize}
+  \setlength\itemsep{-.25em}
+  \item The economies of ALL nations are dependent on software.
+  \item More and more systems are software controlled.
+  \item Software engineering is concerned with theories, methods and tools for professional software development.
+  \item Expenditure on software represents a significant fraction of GNP/GDP in all developed countries
+\end{itemize}
+
+\section{Software costs}
+\vspace{-8pt}
+\begin{itemize}
+  \setlength\itemsep{-.25em}
+  \item Software costs often dominate computer system costs. The costs of software on a PC are often greater than the hardware cost.
+  \item Software costs more to maintain than it does to develop. For systems with a long life, maintenance costs may be several times higher than the development costs.
+  \item Software engineering is concerned with cost-effective software development.
+\end{itemize}
+
+\section{Software products}
+\vspace{-8pt}
+\begin{itemize}
+  \setlength\itemsep{-.25em}
+  \item Generic products
+    \begin{itemize}
+	  \vspace{-8pt}
+      \setlength\itemsep{-.25em}
+      \item Stand-alone systems that are marketed and sold to any customer who
+wishes to buy them.
+      \item Examples
+        \begin{itemize}
+	      \vspace{-4pt}
+          \setlength\itemsep{-.25em}
+          \item PC software such as graphics programs
+          \item Project management tools
+          \item CAD software
+          \item Software for specific markets such as appointments systems for dentists.
+        \end{itemize}
+    \end{itemize}
+  \item Customized products
+    \begin{itemize}
+	  \vspace{-8pt}
+      \setlength\itemsep{-.25em}
+      \item Software that is commissioned by a specific customer to meet their own needs.
+      \item Examples – embedded control systems, air traffic control software, traffic monitoring systems.
+    \end{itemize}
+\end{itemize}
+
+\section{Product specification}
+\vspace{-8pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [Generic products] \
+  The specification of what the software should do is owned by the software developer and decisions on software change are made by the developer.
+  \item [Customized products] \
+  The specification of what the software should do is owned by the customer for the software and they make decisions on software changes that are required.
+\end{description}
+
+\newpage
+\section{Frequently asked questions about software engineering}
+\vspace{-8pt}
+\textbf{What is software?}\newline
+  Computer programs and associated documentation. Software products may be developed for a particular customer or may be developed for a general market.
+\newline\newline
+\textbf{What are the attributes of good software?}\newline
+  Good software should deliver the required functionality and performance to the user and should be maintainable, dependable and usable.
+\newline\newline
+\textbf{What is software engineering?}\newline
+Software engineering is an engineering discipline that is
+concerned with all aspects of software production
+\newline\newline
+\textbf{What are the fundamental software engineering activities?}\newline
+Software specification, software development, software
+validation and software evolution(maintenance)
+\newline\newline
+\textbf{What is the difference between software engineering and computer science?}\newline
+Computer science focuses on theory and fundamentals; software engineering is concerned with the practicalities of developing and delivering useful software.
+\newline\newline
+\textbf{What is the difference between software engineering and system engineering?}\newline
+System engineering is concerned with all aspects of computer-based systems development including hardware, software and process engineering. Software engineering is part of this more general process
+\newline\newline
+\textbf{What are the key challenges facing software engineering?}\newline
+Coping with increasing diversity, demands for reduced delivery times and developing trustworthy software.
+\newline\newline
+\textbf{What are the costs of software engineering?}\newline
+Roughly 60\% of software costs are development costs, 40\% are testing costs. For custom software, evolution costs often exceed development costs.
+\newline\newline
+\textbf{What are the best software engineering techniques and methods?}\newline
+While all software projects have to be professionally managed and developed, different techniques are appropriate for different types of system. For example, games should always be developed using a series of prototypes whereas safety critical control systems require a complete and analyzable specification to be developed. You can’t, therefore, say that one method is better than another.
+\newline\newline
+\textbf{What differences has the web made to software engineering?}\newline
+The web has led to the availability of software services and the possibility of developing highly distributed service-based systems. Web-based systems development has led to important advances in programming languages and software reuse.
+
+\newpage
+\section{Essential attributes of good software}
+\vspace{-8pt}
+\textbf{Maintainability}\newline
+Software should be written in such a way so that it can evolve to meet the changing needs of customers. This is a critical attribute because software change is an inevitable requirement of a changing business environment.
+\newline\newline
+\textbf{Dependability and security}\newline
+Software dependability includes a range of characteristics including reliability, security and safety. Dependable software should not cause physical or economic damage in the event of
+system failure. Malicious users should not be able to access or damage the system
+\newline\newline
+\textbf{Efficiency}\newline
+Software should not make wasteful use of system resources such as memory and processor cycles. Efficiency therefore includes responsiveness, processing time, memory utilization, etc
+\newline\newline
+\textbf{Acceptability}\newline
+Software must be acceptable to the type of users for which it is designed. This means that it must be understandable, usable and compatible with other systems that they use.
+
+\section{Software engineering}
+\vspace{-8pt}
+\begin{itemize}
+  \addtolength{\itemindent}{0cm}
+  \setlength\itemsep{-.25em}
+  \item Software engineering is an engineering discipline that is concerned with all aspects of software production from the early stages of system specification through to maintaining the system after it has gone into use. (Note: professor definition)
+  \item Engineering discipline
+  \begin{itemize}
+	\vspace{-8pt}
+    \setlength\itemsep{-.25em}
+    \item Using appropriate theories and methods to solve problems bearing in mind
+organizational and financial constraints
+\end{itemize}
+  \item All aspects of software production
+  \begin{itemize}
+	\vspace{-8pt}
+    \setlength\itemsep{-.25em}
+    \item Not just technical process of development
+    \item Also project management and the development of tools, methods etc. to support software production
+  \end{itemize}
+\end{itemize}
+
+\section{Software process activities}
+\vspace{-8pt}
+\begin{description}
+  \addtolength{\itemindent}{0cm}
+  \setlength\itemsep{-.25em}
+  \item [Software specification] where customers and engineers
+define the software that is to be produced and the constraints on its operation.
+  \item [Software development] where the software is designed and programmed.
+  \item [Software validation] where the software is checked to ensure that it is what the customer requires.
+  \item [Software evolution] where the software is modified to reflect changing customer and market requirements.
+\end{description}
+
+\newpage
+\section{Application types}
+\vspace{-8pt}
+\begin{description}
+  \addtolength{\itemindent}{0cm}
+  \setlength\itemsep{-.25em}
+  \item [Stand-alone applications] \
+  \begin{itemize}
+	\vspace{-8pt}
+    \setlength\itemsep{-.25em}
+    \item These are application systems that run on a local computer, such as a PC.
+    \item They include all necessary functionality and do not need to be connected to a
+network.
+  \end{itemize}
+  \item [Interactive transaction-based applications] \
+  \begin{itemize}
+	\vspace{-8pt}
+    \setlength\itemsep{-.25em}
+    \item Applications that execute on a remote computer and are accessed by users from
+their own PCs or terminals.
+	\item These include web applications such as e-commerce applications.
+  \end{itemize}
+  \item [Embedded control systems] \
+  \begin{itemize}
+	\vspace{-8pt}
+    \setlength\itemsep{-.25em}
+    \item These are software control systems that control and manage hardware devices.
+    \item Numerically, there are probably more embedded systems than any other type of
+system.
+  \end{itemize}
+  \item [Batch processing systems] \
+  \begin{itemize}
+	\vspace{-8pt}
+    \setlength\itemsep{-.25em}
+    \item These are business systems that are designed to process data in
+large batches.
+    \item They process large numbers of individual inputs to create
+corresponding outputs.
+  \end{itemize}
+  \item [Entertainment systems] \
+  \begin{itemize}
+	\vspace{-8pt}
+    \setlength\itemsep{-.25em}
+    \item These are systems that are primarily for personal use and which
+are intended to entertain the user.
+  \end{itemize}
+  \item [Systems for modeling and simulation] \
+  \begin{itemize}
+	\vspace{-8pt}
+    \setlength\itemsep{-.25em}
+    \item These are systems that are developed by scientists and engineers
+to model physical processes or situations, which include many,
+separate, interacting objects.
+  \end{itemize}
+  \item [Data collection systems] \
+  \begin{itemize}
+	\vspace{-8pt}
+    \setlength\itemsep{-.25em}
+    \item These are systems that collect data from their environment using a
+set of sensors and send that data to other systems for processing.
+  \end{itemize}
+  \item [Systems of systems] \ \newline
+These are systems that are composed of a number of other software systems.
+\end{description}
+
+\newpage
+\section{Requirements}
+\vspace{-8pt}
+Stake holders needs and desires\newline
+\textbf{Requirement IEEE Definition:}
+  \begin{itemize}
+	\vspace{-6pt}
+    \setlength\itemsep{-.25em}
+    \item a condition or capability needed by a user to solve a \textbf{problem} or achieve an objective
+    \item a condition or capability that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed document
+  \end{itemize}
+\vspace{-6pt}
+A \textbf{problem} is a difference between things as desired and things as perceived
+
+\subsection{Types of Requirements}
+\vspace{-6pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [User requirements] - Written for customers\newline
+  Statements in natural language plus diagrams of services the system provides \& its operational constraints.\newline
+  \textbf{Readers:} Client manager, System end-users, Client engineers, Contract managers, System architect
+  \item [System requirements] - Written as a contract between client and contractor \newline
+  A structured document setting out detailed descriptions of the system services.\newline
+  \textbf{Readers:} System end-users, Client engineers, System architects, Software developers
+  \item [Software specification] - Written for developers \newline
+  A detailed software description which can serve as a basis for a design or implementation. \newline
+  \textbf{Readers:} Client engineers (perhaps), System architects, Software developers
+\end{description}
+
+\subsection{Functional and Non-Functional Requirements}
+\vspace{-6pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [Functional requirements] \ \newline
+   Statements of services the system should provide, how the system should react to particular inputs and how the system should behave in particular situations. (Specific details/specs of the function of the software)
+  \item [Non-Functional requirements] \ \newline
+   Constraints on the services or functions offered by the system such as timing constraints, constraints on the development process, standards, etc. Ex: Security, Extensibility, Scalability, Portability etc
+\end{description}
+
+\subsection{The meaning of requirements}
+\vspace{-8pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [Domain Properties] Things in the \textbf{application domain} that are true regardless if we ever build  proposed system
+  \item [Requirements] Things in the \textbf{application domain} that we wish to be made true by delivering proposed system\newline
+Many of which will involve phenomena to which the machine has no
+access
+  \item [A Specification] Is a description of the behaviors that the program must have in order to meet the requirements\newline 
+Can only be written in terms of shared phenomena!
+\end{description}
+
+\subsection{Requirements Engineering (RE)}
+\vspace{-6pt}
+Requirements Engineering (RE) is a \textbf{set of activities} concerned with \textbf{identifying and communicating} the \textbf{purpose} of a software-intensive system, and the \textbf{contexts} in which it will be used. Hence, RE acts as the bridge between the \textbf{real world needs} of users, customers, and other \textbf{constituencies} affected by a software system and the \textbf{capabilities and opportunities} afforded by software-intensive technologies
+\begin{itemize}
+  \setlength\itemsep{-.25em}
+  \item Discovering stakeholder goals, needs, and expectations
+  \item Communicating these to system implementers
+\end{itemize}
+
+\subsubsection{Importance of RE}
+\vspace{-6pt}
+\textbf{Problems}
+\vspace{-6pt}
+\begin{itemize}
+  \setlength\itemsep{-.25em}
+  \item Increased reliance on software
+  \item Software now the biggest cost element for mission critical systems
+  \item Wastage on failed projects
+\end{itemize}
+\vspace{-6pt}
+\textbf{Key Factors}
+\vspace{-6pt}
+\begin{itemize}
+  \setlength\itemsep{-.25em}
+  \item Certification costs
+  \item Re-work from defect removal
+  \item Changing requirements
+\end{itemize}
+
+\newpage
+%\subsection{The Requirements Engineering Process}
+
+\newpage
+\section{The Software Process}
+A structured set of activities required to develop a software system.\newline
+Many different software processes but all involve:
+\vspace{-8pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [Specification] defining what the system should do;
+  \item [Design and implementation] defining the organization of the
+system and implementing the system;
+  \item [Validation] checking that it does what the customer wants;
+  \item [Evolution] changing the system in response to changing
+customer needs.
+\end{description}
+A software process model is an abstract representation of a process. It presents a description of a process from some particular perspective.
+
+\subsection{Software Process Descriptions}
+
+\subsection{Plan-Driven and Agile Processes}
+\vspace{-6pt}
+\textbf{Plan-Driven processes} are processors where all of the process activities are planned in advance and progress is measured against this plan. Plan-drive \textbf{can be incremental}, but incremental development usually is agile. In \textbf{Agile processes}, planning is incremental and it is easier to change the process to reflect changing customer requirements. All agile methods \textbf{use incremental development}, with usually two week sprint cycles and deliverables. In practice, most practical processes include elements of \textbf{both plan-drive and agile} approaches. There are no right or wrong software processes.
+\vspace{-8pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [Plan-Driven:] Waterfall Model, Spiral Model
+  \item [Agile:] Incremental Development, Scrum, XP, Dynamic Systems Development
+\end{description}
+
+
+\subsection{Software Process vs Software Process Model Q/A}
+\vspace{-6pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [What is a software process?] \ \newline The abstract representation of a process used for development either Plan-Driven or Agile, or a combination
+  \item [What is a software process model?] \ \newline The process model used for project documentation and/or development
+  \item [What is the difference?] \ \newline The process is the general approach used for development, and the model is the actual style and method, the steps required, for the development process
+\end{description}
+
+\section{Software Process Models}
+\vspace{-8pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [The Waterfall model] - Generic 1 \newline Separate and distinct phases of specification and development.  \textbf{Plan-driven} model\newline
+  \textbf{Good for:} safety critical systems, government projects, large projects developed at many sites
+  \item [Incremental development] - Generic 2 \newline Specification, development, and validation are interleaved. May be \textbf{plan-driven or agile}.\newline
+  \textbf{Good for:} business systems, web, distributed applications
+  \item [Reuse-based] - Generic 3 \newline The system is assembled from existing components. May be \textbf{plan-driven or agile}.\newline
+  \textbf{Good for:} Modifying or replacing existing systems
+  \item [Evolutionary] \ \newline Specification and development are interleaved
+  \item [Formal Transformation] \ \newline A mathematical system model is formally transformed to an implementation
+  \item [Spiral]
+  \item [V shaped]
+\end{description}
+\vspace{-6pt}
+In practice, most large systems are developed using a process that incorporates elements from all of these models.
+
+\newpage
+
+\subsection{Waterfall Process Model}
+
+% ----------------------------------- COMMENTED OUT----------------------------------------------------
+\comment {
+\subsubsection{Waterfall Model Documents} 
+\vspace{-8pt}
+\begin{tabular}{|l|l|}
+    \hline
+	\thead{Activity} & \thead{Output Documents}\\
+    \hline
+Requirements analysis & Feasibility study, Outline requirements\\
+    \hline
+Requirements definition & Requirements document\\
+    \hline
+System specification & Functional specification, Acceptance test plan \newline Draft user manual\\
+    \hline
+Architectural design & Architectural specification, System test plan\\
+    \hline
+Interface design & Interface specification, Integration test plan\\
+    \hline
+Detailed design & Design specification, Unit test plan\\
+    \hline
+Coding & Program code\\
+    \hline
+Unit testing & Unit test report\\
+    \hline
+Module testing & Module test report\\
+    \hline
+Integration testing & Integration test report, Final user manual\\
+    \hline
+System testing & System test report\\
+    \hline
+Acceptance testing & Final system plus documentation\\
+    \hline
+  \end{tabular}
+}
+% ----------------------------------- COMMENTED OUT----------------------------------------------------
+
+\subsubsection{Waterfall Model Phases} 
+\vspace{-8pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [Requirements analysis and definition] \ \newline
+  System’s services, constraints, and goals established \newline
+  System specification
+  \item [System and software design] \ \newline
+  \textbf{System Design} allocates requirements to either hardware or software systems. \newline
+  \textbf{Software Design} involves identification of fundamental software system abstractions and their relationships
+  \item [Implementation and unit testing] \ \newline
+  Software design is realized as a set of programs \newline
+  Unit testing
+  \item [Integration and system testing] \ \newline
+  Integration of programs \newline
+  Testing
+  \item [Operation and maintenance] \ \newline
+  System is installed and put into practical use \newline
+  Maintenance (correcting errors) \newline
+  Enhancing system’s services
+\end{description}
+\vspace{-8pt}
+
+\subsubsection{Waterfall Model Benefits}
+\vspace{-8pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [Documentation] All aspects are heavily documented
+  \item [Rigid project structure] Project structure is well defined and done in phases
+  \item [Advanced planning] Planning is done ahead of other phases like development
+  \item [Maintainability] Having lots of documentation leads to a more maintainable system in the long term
+  \item [Feature Creep] Limits adding excessive or repeated features that cause delays in development
+  \item [Cost/Budget Estimation/Management] Easier and more accurate control over cost/budget and estimation/mangement
+\end{description}
+
+\subsubsection{Waterfall Model Problems}
+\vspace{-8pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [Heavy Documentation] \ \newline
+  There are a lot of documents involved in this model that must be maintained and updated throughout the life of the project and into evolution/maintenance
+  \item [Difficulty of accommodating change] \ \newline
+  The main drawback of the waterfall model is the difficulty of accommodating change after the process is underway.
+  \item [Must complete a phase before the next] \ \newline 
+  In principle, a phase has to be completed before moving onto the next phase.
+  \item [Inability to split up stages] \ \newline
+  Inflexible partitioning of project into distinct stages makes it hard to respond to changing requirements.
+  \vspace{-6pt}
+  \begin{itemize}
+    \setlength\itemsep{-.25em}
+    \item Therefore, this model is only appropriate when the requirements are well-understood and changes will be fairly limited during the design process.
+    \item Few business systems have stable requirements.
+  \end{itemize}
+  \vspace{-6pt}
+  \item [Used for large projects] \ \newline
+   Mostly used for large systems engineering projects where a system is developed at several sites.
+\vspace{-6pt}
+  \begin{itemize}
+    \setlength\itemsep{-.25em}
+    \item In those circumstances, the plan-driven nature of the waterfall model helps coordinate the work.
+  \end{itemize}
+\end{description}
+
+\newpage
+\subsection{Incremental Development}
+\vspace{-6pt}
+It is based on the \textbf{idea of development in initial implementation, exposing this to user comment and evolving it through several versions until an adequate system has been developed. Specification, development, and validation are interleaved} rather than separate, with rapid feedback across activities.
+
+\subsubsection{Incremental Development Benefits}
+\vspace{-6pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [The cost of accommodating changing customer requirements is reduced] \ \newline
+  The amount of analysis and documentation to be redone is much less than is required with waterfall model
+  \item [It is easier to get customer feedback on the development work that has to be done] \ \newline
+  Customers can comment on the demonstrations of the software and see how much has been implemented
+  \item [More rapid delivery and deployment of useful software to the customer is possible] \ \newline
+  Customers are able to use and gain value from the software earlier than is possible with a waterfall process.
+\end{description}
+
+
+\subsubsection{Incremental Development Problems}
+\vspace{-6pt}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [The process is not visible] \ \newline
+  Managers need regular deliverables to measure progress. If systems are developed quickly, it is not cost-effective to produce documents that reflect every version of the system.
+  \item [System structure tends to degrade as new increments are added] \ \newline
+  Unless time and money is spent on refactoring to improve the software, regular change tends to corrupt its structure\newline
+  Incorporating further software changes becomes increasingly difficult and costly.
+\end{description}
+
+\subsection{Reuse-Oriented Software Engineering}
+\vspace{-6pt}
+Based on systematic reuse where systems are integrated from existing components or COTS(Commercial-off-the-shelf) systems. Reuse is now the standard approach for building many types of business systems.\newline
+\textbf{Process stages:}
+\begin{description}
+  \setlength\itemsep{-.25em}
+  \item [Component analysis] \
+  \vspace{-6pt}
+  \begin{itemize}
+    \setlength\itemsep{-.25em}
+    \item Given the requirements specification, a search is made for components to implement that specification.
+    \item Usually, there is no exact match and the components that may be used only provide some of the required functionality.
+  \end{itemize}
+  \item[Requirements modification] \
+  \vspace{-6pt}
+  \begin{itemize}
+  \setlength\itemsep{-.25em}
+  \item During this stage, the requirements are analysed using information about the components that have been discovered.
+  \item They are then modified to reflect the available components.
+  \item Where modifications are impossible, the component analysis activity may be re-entered to search for alternative solutions.
+  \end{itemize}
+  \item [System design with reuse] \
+  \vspace{-6pt}
+  \begin{itemize}
+  \setlength\itemsep{-.25em}
+  \item During this phase, the framework of the system is designed or an existing framework is reused.
+  \item The designers take into account the components that are reused.
+  \end{itemize}
+  \item [Development and integration.] \
+  \vspace{-6pt}
+  \begin{itemize}
+  \setlength\itemsep{-.25em}
+   \item Software that can’t be externally procured is developed, and the components and COTS systems are integrated to create the new system.
+  \end{itemize}
+\end{description}
+
+
+
+
+
+
+
+
+
+\end{document}

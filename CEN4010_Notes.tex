@@ -149,15 +149,6 @@ System engineering is concerned with all aspects of computer-based systems devel
 The web has led to the availability of software services \& the possibility of developing highly distributed service-based systems. Web-based systems development has led to important advances in programming languages \& software reuse.
 
 \newpage
-\section{Fundamental Software Process Activities}
-\begin{description}[style=multiline,leftmargin=12em]
-  \item [\textr{Software specification}] where customers \& engineers
-define the software that is to be produced \& the constraints on its operation.
-  \item [\textr{Software development}] where the software is designed \& programmed.
-  \item [\textr{Software validation}] where the software is checked to ensure that it is what the customer requires.
-  \item [\textr{Software evolution}] where the software is modified to reflect changing customer \& market requirements.
-\end{description}
-
 \section{Application types}
 \begin{description}
   \item [Stand-alone applications] \
@@ -390,34 +381,33 @@ the customer's needs?
 
 
 \chapter{Software Processes}
-\section{The Software Process}
-A structured set of activities required to develop a software system.\newline
-Many different software processes but all involve:
-\begin{description}
-  \item [Specification] defining what the system should do;
-  \item [Design \& implementation] defining the organization of the
-system \& implementing the system;
-  \item [Validation] checking that it does what the customer wants;
-  \item [Evolution] changing the system in response to changing
-customer needs.
+\section{Fundamental Software Process Activities}
+\begin{description}[style=multiline,leftmargin=12em]
+  \item [\textr{Software specification}] Defining what the system should do.\newline
+  Where customers \& engineers
+define the software that is to be produced \& the constraints on its operation.
+  \item [\textr{Software development}] Defining/Designing the organization of the
+system \& implementing the system.\newline
+  Where the software is designed \& programmed.
+  \item [\textr{Software validation}] Checking that it does what the customer wants\newline
+  Where the software is checked to ensure that it is what the customer requires.
+  \item [\textr{Software evolution}] Changing the system in response to changing customer needs.\newline
+  Where the software is modified to reflect changing customer \& market requirements.
 \end{description}
-A software process model is an abstract representation of a process. It presents a description of a process from some particular perspective.
 
-\subsection{Software Process Descriptions}
-
-\subsection{Plan-Driven \& Agile Processes}
-\textbf{Plan-Driven processes} are processors where all of the process activities are planned in advance \& progress is measured against this plan. Plan-drive \textbf{can be incremental}, but incremental development usually is agile. In \textbf{Agile processes}, planning is incremental \& it is easier to change the process to reflect changing customer requirements. All agile methods \textbf{use incremental development}, with usually two week sprint cycles \& deliverables. In practice, most practical processes include elements of \textbf{both plan-drive \& agile} approaches. There are no right or wrong software processes.
+\section{Plan-Driven \& Agile Processes}
+\noindent \textbf{Plan-Driven processes} are where all of the process activities are planned in advance \& progress is measured against this plan. Plan-drive \textbf{can be incremental}, but incremental development usually is Agile. In \textbf{Agile processes}, planning is incremental \& it is easier to change the process to reflect changing customer requirements. All agile methods \textbf{use incremental development}, with usually two week sprint cycles \& deliverables. In practice, most practical processes include elements of \textbf{both plan-drive \& agile} approaches.\newline There are no right or wrong software processes.
 \begin{description}
   \item [Plan-Driven:] Waterfall Model, Spiral Model
   \item [Agile:] Incremental Development, Scrum, XP, Dynamic Systems Development
 \end{description}
 
-
-\subsection{Software Process vs Software Process Model Q/A}
+\section{Software Process Model vs Software Process Method Q/A}
 \begin{description}
-  \item [What is a software process?] \ \newline The abstract representation of a process used for development either Plan-Driven or Agile, or a combination
-  \item [What is a software process model?] \ \newline The process model used for project documentation \&/or development
-  \item [What is the difference?] \ \newline The process is the general approach used for development, \& the model is the actual style \& method, the steps required, for the development process
+  \item [What is a software process model?] \ \newline A simplified or abstract representation of a different software process. The model used for project documentation \&/or development. The primary functions of a software process model are to determine the order of the stages involved in software development \& evolution \& to establish the transition criteria for progressing from one stage to the next. It presents a description of a process from some particular perspective.
+
+  \item [What is a software process method?] \ \newline A simplified or abstract representation of a process used for development either Plan-Driven or Agile, or a combination. A method’s primary focus is on how to navigate through each phase. A structured set of activities required to develop a software system.
+  \item [What is the difference?] \ \newline The process model is the general approach used for development, the order of states and steps required for development. The model how those steps are carried out and how they move from one stage to another following the process model.
 \end{description}
 
 \section{Software Process Models}
@@ -437,44 +427,9 @@ In practice, most large systems are developed using a process that incorporates 
 
 \newpage
 
-\subsection{Waterfall Process Model}
-
-% ----------------------------------- COMMENTED OUT----------------------------------------------------
-\comment {
-\subsubsection{Waterfall Model Documents}
-\begin{tabular}{|l|l|}
-    \hline
-	\thead{Activity} & \thead{Output Documents}\\
-    \hline
-Requirements analysis & Feasibility study, Outline requirements\\
-    \hline
-Requirements definition & Requirements document\\
-    \hline
-System specification & Functional specification, Acceptance test plan \newline Draft user manual\\
-    \hline
-Architectural design & Architectural specification, System test plan\\
-    \hline
-Interface design & Interface specification, Integration test plan\\
-    \hline
-Detailed design & Design specification, Unit test plan\\
-    \hline
-Coding & Program code\\
-    \hline
-Unit testing & Unit test report\\
-    \hline
-Module testing & Module test report\\
-    \hline
-Integration testing & Integration test report, Final user manual\\
-    \hline
-System testing & System test report\\
-    \hline
-Acceptance testing & Final system plus documentation\\
-    \hline
-  \end{tabular}
-}
-% ----------------------------------- COMMENTED OUT----------------------------------------------------
-
-\subsubsection{Waterfall Model Phases} 
+\section{Waterfall Process Model}
+\begin{multicols}{2}
+\subsection{Waterfall Model Phases} 
 \begin{description}
   \item [Requirements analysis \& definition] \ \newline
   System’s services, constraints, \& goals established \newline
@@ -492,9 +447,40 @@ Acceptance testing & Final system plus documentation\\
   System is installed \& put into practical use \newline
   Maintenance (correcting errors) \newline
   Enhancing system’s services
-\end{description}
+\end{description} \ \newline
+\subsection{Waterfall Model Documents}
+\begin{tabular}{|l|l|}
+    \hline
+	\thead{Activity} & \thead{Output Documents}\\
+    \hline
+Requirements analysis & \makecell[cl]{Feasibility study, \\ Outline requirements}\\
+    \hline
+Requirements definition & Requirements document\\
+    \hline
+System specification & \makecell[cl]{Functional specification, \\ Acceptance test plan \\ Draft user manual}\\
+    \hline
+Architectural design & \makecell[cl]{Architectural specification, \\ System test plan}\\
+    \hline
+Interface design & \makecell[cl]{Interface specification, \\ Integration test plan}\\
+    \hline
+Detailed design & \makecell[cl]{Design specification, \\ Unit test plan}\\
+    \hline
+Coding & Program code\\
+    \hline
+Unit testing & Unit test report\\
+    \hline
+Module testing & Module test report\\
+    \hline
+Integration testing & \makecell[cl]{Integration test report, \\ Final user manual}\\
+    \hline
+System testing & System test report\\
+    \hline
+Acceptance testing & Final system plus documentation\\
+    \hline
+  \end{tabular}
+\end{multicols}
 
-\subsubsection{Waterfall Model Benefits}
+\subsection{Waterfall Model Benefits}
 \begin{description}
   \item [Documentation] All aspects are heavily documented
   \item [Rigid project structure] Project structure is well defined \& done in phases
@@ -504,7 +490,7 @@ Acceptance testing & Final system plus documentation\\
   \item [Cost/Budget Estimation/Management] Easier \& more accurate control over cost/budget \& estimation/mangement
 \end{description}
 
-\subsubsection{Waterfall Model Problems}
+\subsection{Waterfall Model Problems}
 \begin{description}
   \item [Heavy Documentation] \ \newline
   There are a lot of documents involved in this model that must be maintained \& updated throughout the life of the project \& into evolution/maintenance
@@ -526,10 +512,17 @@ Acceptance testing & Final system plus documentation\\
 \end{description}
 
 \newpage
-\subsection{Incremental Development}
-It is based on the \textbf{idea of development in initial implementation, exposing this to user comment \& evolving it through several versions until an adequate system has been developed. Specification, development, \& validation are interleaved} rather than separate, with rapid feedback across activities.
+\section{Incremental Development}
+\vspace{-1em}
+\begin{multicols}{2}
+\noindent It is based on the \textbf{idea of development in initial implementation, exposing this to user comment \& evolving it through several versions until an adequate system has been developed. Specification, development, \& validation are interleaved} rather than separate, with rapid feedback across activities.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.3,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_Incremental_Development.jpg}
+\end{figure}
+\end{multicols}
 
-\subsubsection{Incremental Development Benefits}
+\subsection{Incremental Development Benefits}
 \begin{description}
   \item [The cost of accommodating changing customer requirements is reduced] \ \newline
   The amount of analysis \& documentation to be redone is much less than is required with waterfall model
@@ -540,7 +533,7 @@ It is based on the \textbf{idea of development in initial implementation, exposi
 \end{description}
 
 
-\subsubsection{Incremental Development Problems}
+\subsection{Incremental Development Problems}
 \begin{description}
   \item [The process is not visible] \ \newline
   Managers need regular deliverables to measure progress. If systems are developed quickly, it is not cost-effective to produce documents that reflect every version of the system.
@@ -549,8 +542,8 @@ It is based on the \textbf{idea of development in initial implementation, exposi
   Incorporating further software changes becomes increasingly difficult \& costly.
 \end{description}
 
-\subsection{Reuse-Oriented Software Engineering}
-Based on systematic reuse where systems are integrated from existing components or COTS(Commercial-off-the-shelf) systems. Reuse is now the standard approach for building many types of business systems.\newline
+\section{Reuse-Oriented Software Engineering}
+\noindent Based on systematic reuse where systems are integrated from existing components or COTS(Commercial-off-the-shelf) systems. Reuse is now the standard approach for building many types of business systems.\newline
 \textbf{Process stages:}
 \begin{description}
   \item [Component analysis] \
@@ -574,6 +567,229 @@ Based on systematic reuse where systems are integrated from existing components 
    \item Software that can’t be externally procured is developed, \& the components \& COTS systems are integrated to create the new system.
   \end{itemize}
 \end{description}
+
+\newpage
+\section{Software Prototyping}
+\vspace{-1em}
+\begin{multicols}{2}
+\noindent A prototype is an initial version of a system used to demonstrate concepts and try out design options. A prototype can be used in:
+\begin{itemize}
+  \item The requirements engineering process to help with requirements elicitation and validation
+  \item In design processes to explore options and develop a UI design
+  \item In the testing process to run back-to-back tests
+\end{itemize} \ \newline
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.35,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_Prototype_Development.jpg}
+\end{figure}
+\vfill\columnbreak
+\end{multicols}
+
+\subsection{Benefits of Prototyping}
+\begin{itemize}
+  \item Improved system usability.
+  \item A closer match to users' real needs.
+  \item Improved design quality.
+  \item Improved maintainability.
+  \item Reduced development effort
+\end{itemize}
+
+\subsection{Prototype Development}
+\noindent May be based on rapid prototyping languages or tools. May involve leaving out functionality
+\begin{itemize}
+  \item Prototype should focus on areas of the product that are not well-understood;
+  \item Error checking and recovery may not be included in the prototype;
+  \item Focus on functional rather than non-functional requirements such as reliability and security
+\end{itemize}
+
+\subsection{Throw-Away Prototypes}
+\noindent Prototypes should be discarded after development as they are not a good basis for a production system:
+\begin{itemize}
+  \item It may be impossible to tune the prototype to meet non-functional requirements
+  \item Prototypes are normally undocumented
+  \item The prototype structure is usually degraded through rapid change
+  \item The prototype probably will not meet normal organizational quality standards
+\end{itemize}
+
+
+\section{Incremental Delivery}
+\vspace{-1em}
+\begin{multicols}{2}
+\begin{itemize}
+  \item Rather than deliver the system as a single delivery, the development and delivery is broken down into increments with each increment delivering part of the required functionality.
+  \item User requirements are prioritized and the highest priority requirements are included in early increments.
+  \item Once the development of an increment is started, the requirements are frozen though requirements for later increments can continue to evolve.
+\end{itemize}\ \newline
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.35,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_Incremental_Delivery.jpg}
+\end{figure}
+\vfill\columnbreak
+\end{multicols}
+  
+\subsection{Incremental Development and Delivery}
+\noindent \textbf{Incremental development}
+\begin{itemize}
+  \item \textg{Develop} the system in increments and evaluate each increment before proceeding to the development of the next increment;
+  \item Normal approach used in agile methods;
+  \item Evaluation done by user/customer proxy
+\end{itemize}
+\textbf{Incremental Delivery}
+\begin{itemize}
+  \item Deploy an increment for use by end-users
+  \item More realistic evaluation about practical use of software
+  \item Difficult to implement for replacement systems as increments have less functionality than the system being replaced
+\end{itemize}
+
+\subsection{Incremental Delivery Advantages}
+\begin{itemize}
+  \item Customer value can be delivered with each increment so system functionality is available earlier.
+  \item Early increments act as a prototype to help elicit requirements for later increments.
+  \item Lower risk of overall project failure.
+  \item The highest priority system services tend to receive the most testing
+\end{itemize}
+
+\subsection{Incremental Delivery Problems}
+\begin{itemize}
+  \item Most systems require a set of basic facilities that are used by different parts of the system.
+  \begin{itemize}
+    \item As requirements are not defined in detail until an increment is to be implemented, it can be hard to identify common facilities that are needed by all increments. 
+  \end{itemize}
+  \item The essence of iterative processes is that the specification is developed in conjunction with the software.
+  \begin{itemize}
+    \item However, this conflicts with the procurement model of many organizations, where the complete system specification is part of the system development contract.
+  \end{itemize}
+  \item Iterative delivery is problematic when the new system is intended to replace an existing system.
+  \begin{itemize}
+    \item Users need all of the functionality of the old system and are usually unwilling to experiment with an incomplete new system.
+    \item Often impractical to use the old and new systems alongside each other.
+  \end{itemize}
+\end{itemize}
+
+\section{Boehm's Spiral Model}
+\vspace{-1em}
+\begin{multicols}{2}
+\begin{itemize}
+  \item Process is represented as a spiral rather than a sequence of activities with backtracking.
+  \item Each loop in the spiral represents a phase in the process.
+  \item No fixed phases such as specification or design - loops in the spiral are chosen depending on what is required.
+  \item Risks are explicitly assessed and resolved throughout the process.
+\end{itemize} \
+\textr{Risk-driven software process framework}
+
+\noindent Main Difference : \textbfg{Explicit Recognition of Risk} \newline
+\columnbreak
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.35,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_Spiral_Model.jpg}
+\end{figure}
+\end{multicols}
+
+\vspace{-2em}
+\subsection{Spiral Model Usage}
+\begin{itemize}
+  \item Spiral model has been very influential in helping people think about iteration in software processes and introducing the risk-driven approach to development.
+  \item In practice, however, the model is rarely used as published for practical software development.
+\end{itemize}
+
+\section{Rational Unified Process}
+\noindent A modern generic process derived from the work on the UML \& associated Unified Software Development Process \newline
+\textbfg{Good example of a hybrid process model}
+\begin{itemize}
+  \item Brings together aspects of the 3 generic process models discussed previously
+  \item Illustrates good practice in specification and design
+  \item Supports prototyping and incremental delivery
+\end{itemize}
+\textbfg{Normally described from 3 perspectives}
+\begin{itemize}
+  \item A dynamic perspective that shows phases over time
+  \item A static perspective that shows process activities
+  \item A practice perspective that suggests good practice
+\end{itemize}
+
+\newpage
+\subsection{RUP Phases}
+\vspace{-1em}
+\begin{multicols}{2}
+\noindent \textbf{Inception}
+\begin{itemize}
+  \item Establish the business case for the system.
+\end{itemize}
+\textbf{Elaboration}
+\begin{itemize}
+  \item Develop an understanding of the problem domain
+  \item Establish an architectural framework
+  \item Develop the project plan
+  \item Identify key project risks.
+\end{itemize}
+\textbf{Construction}
+\begin{itemize}
+  \item System design, programming and testing.
+\end{itemize}
+\textbf{Transition}
+\begin{itemize}
+  \item Deploy the system in its operating environment.
+\end{itemize}
+\columnbreak
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.35,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_RUP_Phases.jpg}
+\end{figure}
+
+\subsection{RUP Iterations}
+\begin{itemize}
+  \item In-phase iteration: Each phase is iterative with the results developed incrementally
+  \item Cross-phase iteration: As shown by the loop in the RUP model, the whole set of phases may be enacted incrementally
+\end{itemize}
+\end{multicols}
+
+\subsection{Static Workflows in RUP Process}
+\begin{description}[style=multiline,leftmargin=12em]
+  \item [Business modeling:] The business processes are modelled using business use cases
+  \item [Requirements:] Actors who interact with the system are identified and use cases are developed to model the system requirements
+  \item [Analysis and design:] A design model is created and documented using architectural models, component models, object models and sequence models.
+  \item [Implementation:] The components in the system are implemented and structured into implementation sub-systems. Automatic code generation from design models helps accelerate this process
+  \item [Testing:] Testing is an iterative process that is carried out in conjunction with implementation. System testing follows the completion of the implementation.
+  \item [Configuration and \linebreak change management:] This supporting workflow managed changes to the system \newline
+  \item [Project management:] This supporting workflow manages the system development
+  \item [Environment:] This workflow is concerned with making appropriate software tools available to the software development team
+\end{description}
+
+
+\subsection{RUP Good Practices}
+\noindent Develop software iteratively
+\begin{itemize}
+  \item Plan increments based on customer priorities and deliver highest priority increments first.
+\end{itemize}
+Manage requirements
+\begin{itemize}
+  \item Explicitly document customer requirements and keep track of changes to these requirements
+\end{itemize}
+Use component - based architectures
+\begin{itemize}
+  \item Organize the system architecture as a set of reusable components
+\end{itemize}
+Visually model software
+\begin{itemize}
+  \item Use graphical UML models to present static and dynamic views of the software
+\end{itemize}
+Verify software quality
+\begin{itemize}
+  \item Ensure that the software meet?s organizational quality standards
+\end{itemize}
+Control changes to software
+\begin{itemize}
+  \item Manage software changes using a change management system and configuration management tools
+  \item E.g. Git, Jira, SVM: SubVersion, Peforce, VSS: Visual Source Safe, CVS: Concurrent Version System, Rational Clear Case
+\end{itemize}
+
+\subsection{RUP Key Points}
+\begin{itemize}
+  \item The Rational Unified Process is a modern generic process model that is organized into phases (\textbfg{inception, elaboration, construction and transition}) but separates activities (\textbfg{requirements, analysis and design, etc.}) from these phases.
+  \item The most important innovation in the RUP are the \textbfg{separation of phases and workflows}, and the recognition that \textbfg{deploying software in a user's environment} is part of the process.
+\end{itemize}
+
+
 
 
 %--------------------------------------------- Agile ------------------------------------------------

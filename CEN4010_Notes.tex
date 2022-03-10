@@ -7,7 +7,10 @@
 	\usepackage{enumitem}
     \usepackage[T1]{fontenc}
 	\usepackage{hyperref}
+    \usepackage{float}
+    \usepackage{graphicx}
     \usepackage{makecell}
+    \usepackage{multicol, caption}
 	\usepackage{titlesec}
     \renewcommand{\familydefault}{\sfdefault}        	 
     \renewcommand\theadfont{\bfseries\sffamily}
@@ -509,15 +512,17 @@ Based on systematic reuse where systems are integrated from existing components 
   \end{itemize}
 \end{description}
 
+
+--------------------------------------------- Agile ------------------------------------------------
 \chapter{Agile Software Development} 
 \section{Agile Development Methods Umbrella}
-Scrum, Adaptive Software Development, Feature Driven Development, Lean, Kabanzi Framework, eXtreme Programming (XP), Scrumban, Crystal, Kanban, Dynamic Systems Development Method (DSDM) Agile Unified Process (AUP), Pragmatic Programming
+\noindent Scrum, Adaptive Software Development, Feature Driven Development, Lean, Kabanzi Framework, eXtreme Programming (XP), Scrumban, Crystal, Kanban, Dynamic Systems Development Method (DSDM) Agile Unified Process (AUP), Pragmatic Programming
 
 \subsection{Agile Techniques}
-Continuous Integration, Test Driven Development, Pair Programming, Agile Change Management, Agile Modeling, Release Planning
+\noindent Continuous Integration, Test Driven Development, Pair Programming, Agile Change Management, Agile Modeling, Release Planning
 
 \subsection{Agile Methods}
-The aim of agile methods is to reduce overheads in the software process (e.g. by limiting documentation) and to be able to respond quickly to changing requirements without excessive rework.
+\noindent The aim of agile methods is to reduce overheads in the software process (e.g. by limiting documentation) and to be able to respond quickly to changing requirements without excessive rework.
 \begin{itemize}
   \item Focus on the code rather than the design
   \item Are based on an iterative approach to software development
@@ -561,15 +566,158 @@ That is, while there is value in the items on the \textbfg{right}, we value item
 \end{itemize}  
   
 \section{Plan-Drive and Agile Development}
+\vspace{-1em}
+\begin{multicols}{2}
 \noindent\textbf{Plan-Driven Development}
 \begin{itemize}
   \item A plan-driven approach to software engineering is based around separate development stages with the outputs to be produced at each of these stages planned in advance.
   \item Not necessarily waterfall model $-$ plan-drive, incremental development is possible
   \item Iteration occurs within activities
 \end{itemize}  
-\textbf{Plan-Driven Development}
+\textbf{Agile Development}
 \begin{itemize}
-  \item Specification, design, implementation and testing are interleaved and the outputs from the development process are decided through a process of negotiation during the software development process.
-\end{itemize} 
+  \item Specification, design, implementation \& testing are interleaved and the outputs from the development process are decided through a process of negotiation during software development process.
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_Agile_Plan_Driven.jpg}
+\end{figure}
+\end{multicols}
+
+\section{Extreme Programming}
+\vspace{-1em}
+\begin{multicols}{2}
+\noindent The best-known and most widely used agile method. Extreme Programming (XP) takes an 'extreme' approach to iterative development.
+\begin{itemize}
+  \item New versions may be built several times per day
+  \item Increments delivered to customers every 2 weeks
+  \item All tests must be successfully executed when new code is integrated into the system.
+  \item All tests must be run for every build and the build is only accepted if tests run successfully.
+  \item Requirements are expressed as scenarios (called use stories), which are implemented directly as a series of tasks.
+  \item Programmers work in pairs \& develop tests for each task before writing the code.
+  \item Short time gap between releases of the system, with small releases
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.25,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_Agile_XP.jpg}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.35,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_Agile_XP_Release_Cycle.jpg}
+\end{figure}
+\end{multicols}
+
+\section{XP and Agile Principles}
+\begin{description}[style=multiline,leftmargin=12em]
+  \item [\textg{Incremental development}] is supported through small, frequent system releases.
+  \item [\textg{Customer Involvement}] means full-time customer engagement with the team.
+  \item [\textg{People, not process}] are supported through pair programming, collective ownership and a process that avoids long working hours.
+  \item [\textg{Change}] supported through regular system releases.
+  \item [\textg{Maintaining Simplicity}] through constant refactoring of code
+\end{description}
+
+\newpage
+\section{Extreme Programming Practices}
+\begin{description}[style=multiline,leftmargin=12em]
+  \item [Incremental planning] Requirements are recorded on story cards and the stories to be included in a release are determined by the \textr{time available} and their \textr{relative priority}. The Developers break these stories into development 'Tasks'
+    \item [Small releases] Minimal useful set of functionality that provides business value is developed first.\newline
+    Releases of the system are frequent \& incrementally add functionality to first release.
+  \item [Simple design] Enough design is carried out to meet the current requirements and no more.
+  \item [Test-first development] An automated unit test framework is used to write tests for a new piece of functionality before that functionality itself is implemented.
+  \item [Refactoring] All developers are expected to refactor the code continuously as soon as possible code improvements are found. This keeps the code simple and maintainable.
+  \item [Pair programming] developers work in pairs, checking each other's work and providing the support to always do a good job.
+  \item [Collective ownership] The pairs of developers work on all areas of the system, so that no islands of expertise develop and all the developers take responsibility for all of the code. \textr{Anyone can change anything.}
+  \item [Continuous integration] As soon as the work on a task is complete, it is integrated into the whole system. After any such integration, all the unit tests in the system must pass.
+  \item [Sustainable pace] Large amounts of overtime are not considered acceptable as the net effect is often to reduce code quality and medium term productivity.
+  \item [On-site customer] A representative of the end-user of the system (the customer) should be available full time for the use of XP team. In an extreme programming process, the customer is a member of the development team and is responsible for bringing system requirements to the team for implementation.
+\end{description}
+
+\section{Requirements Scenarios}
+\noindent In XP, \textg{a customer or user} is part of the XP team and is responsible for making decisions on requirements. User requirements are expressed as scenarios or user stories. These are written on cards and the development team break them down into implementation tasks. These tasks are the basis of \textg{schedule and cost estimates}. The \textg{customer} chooses the stories for inclusion in the next release based on their \textg{priorities} and the \textg{schedule estimates}.
+
+
+\section{XP and Change}
+\noindent Conventional wisdom in software engineering is to design for change. It is worth spending time and effort anticipating changes as this reduces costs later in the life cycle. XP, however, maintains that this is not worthwhile as changes cannot be reliably anticipated. Rather, it proposes constant code improvement(refactoring) to make changes easier when they have to be implemented.
+
+\section{Refactoring}
+\noindent Programming team look for possible software improvements and make these improvements even when there is no immediate need for them. This improves the \textg{understandability} of the software and so reduces the need for documentation. Changes are easier to make because the code is well-structured and clear. However, some changes require architecture refactoring and that is much more expensive.\newline
+
+\noindent \textbf{Definition:} Refactoring modifies software to improve its readability, maintainability, and extensibility without changing what it actually does. (External behavior does not change, internal structure is improved)\newline
+
+\noindent The goal of refactoring is \textbf{NOT} to add new functionality. The goal of refactoring is to make code easier to maintain in the future. This supports:
+\begin{itemize}
+  \item Program Comprehension
+  \item Source Code Analysis
+  \item Software Maintenance
+  \item Software Traceability
+\end{itemize}
+
+\newpage
+\subsection{Examples of Refactoring}
+\noindent
+\begin{itemize}
+  \item \textg{Re-organization} of a class hierarchy to remove duplicate code.
+  \item Tidying up and \textg{renaming} attributes and methods to make them easier to understand
+  \item The \textg{replacement} of inline code with calls to methods that have been included in a program library.
+\end{itemize}
+
+\subsection{Danger of refactoring}
+\noindent Refactoring \textbf{CAN} introduce problems, because anytime you modify, software you may introduce bugs! Refactoring adds risk and is expensive.
+
+\subsection{Motivation}
+\noindent We refactor because getting the design right the first time is hard and you get many benefits from refactoring.
+\begin{itemize}
+  \item Code size is often reduced
+  \item Confusing code is restructured into simpler code
+  \item Both of these greatly improve maintainability! Which is required because requirements always change!
+\end{itemize}
+
+\subsection{Testing in XP}
+\noindent Testing is central to XP and XP has developed an approach where the program is tested after every change has been made. XP Testing features:
+\begin{itemize}
+  \item Test-first development
+  \item Incremental test development from scenarios
+  \item User involvement in test development and validation
+  \item The use of automated testing frameworks
+\end{itemize}
+
+\section{Test-First Development}
+\noindent Writing tests before code \textg{clarifies the requirements} to be implemented. Tests are \textg{written as programs} rather than data so that they can be executed automatically. The tests includes a check that it has executed correctly. Usually relies on a testing framework such as Junit, Check/libCheck, etc. All previous and new tests are run automatically when new functionality is added, thus checking that new functionality has not introduced errors.
+
+\subsection{Customer Involvement}
+\begin{itemize}
+  \item The role of the customer in the testing process is to help develop \textg{acceptance tests} for the stories that are to be implemented in the next release of the system.
+  \item The customer who is part of the team writes tests as development proceeds.
+  \item All new code is therefore validated to ensure that it is what the customer needs.
+\end{itemize}
+
+\subsection{Test Automation}
+\noindent Test automation means that tests are written as executable components before the task implemented.
+\begin{itemize}
+  \item An automated test framework (e.g. Junit, Check, etc) is a system that makes it easy to write executable tests and submit a set of tests for execution.
+\end{itemize}
+As testing is automated, there is always a set of tests that can be quickly and easily executed.
+\begin{itemize}
+  \item Whenever any functionality is added to the system, the tests can be run and problems that the new code has introduced can be caught immediately.
+\end{itemize}
+
+\subsection{XP Testing difficulties}
+\begin{itemize}
+  \item Incomplete tests - do not check for all possible exceptions that may occur
+  \item Some tests can be very difficult to write incrementally
+  \item It is difficult to judge the completeness of a set of tests
+\end{itemize}
+
+\section{Pair Programming}
+\noindent In XP, programmers work in pairs, sitting together to develop code. This helps develop a common ownership of code and spreads knowledge across the team. It serves as an informal review process as each line of code is looked at by more than 1 person. It encourages refactoring as the whole team an benefit from this. Measurements suggest that development productivity with pair programming is similar to that of two people working independently.
+
+\subsection{XP Testing difficulties}
+\begin{itemize}
+  \item It supports the idea of collective ownership and responsibility for the system.
+  \item It acts as an informal review process because each line of code is looked at by at least two people.
+  \item It helps support refactoring, which is a process of software improvement.
+\end{itemize}
+
+
 
 \end{document}

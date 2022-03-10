@@ -322,15 +322,15 @@ system is worthwhile.
   \item A short focused study that checks
   \begin{itemize}
     \item If the system contributes to organizational objectives
-    \item If the system can be engineered using current technology and within budget
+    \item If the system can be engineered using current technology \& within budget
     \item If the system can be integrated with other systems that are used
   \end{itemize}
 \end{itemize}
 
-\subsection{Elicitation and analysis}
+\subsection{Elicitation \& analysis}
 \begin{itemize}
   \item Involves technical staff working with customers to find out about the application domain, the
-services that the system should provide and the system?s operational constraints.
+services that the system should provide \& the system's operational constraints.
   \item May involve stakeholders: end-users, managers, engineers involved in maintenance, domain experts, trade unions, etc.
 \end{itemize}
 \textbfr{Problems}
@@ -338,7 +338,7 @@ services that the system should provide and the system?s operational constraints
   \item Stakeholders don't know what they really want.
   \item Stakeholders express requirements in their own terms.
   \item Different stakeholders may have conflicting requirements.
-  \item Organizational and political factors may influence the system requirements.
+  \item Organizational \& political factors may influence the system requirements.
   \item The requirements change during the analysis process; new stakeholders emerge, business env change.
 \end{itemize}
 
@@ -372,7 +372,7 @@ the customer's needs?
   \item [\textr{Consistency}] Are there any requirements conflicts?
   \item [\textr{Completeness}] Are all functions required by the customer included?
   \item [\textr{Realism}] Can the requirements be implemented given available budget
-and technology
+\& technology
   \item [\textr{Verifiability}] Can the requirements be checked?
 \end{description}
 
@@ -771,9 +771,9 @@ As testing is automated, there is always a set of tests that can be quickly \& e
 \noindent The SCRUM approach is a general agile method but its focus is on managing iterative development rather than specific agile practices. These are three phases in scrum.
 \begin{multicols}{2}
 \begin{enumerate}
-  \item The initial phase is an \textbfv{outline planning phase} where you establish the general objectives for the project and \textbfv{design the software architecture}.
+  \item The initial phase is an \textbfv{outline planning phase} where you establish the general objectives for the project \& \textbfv{design the software architecture}.
   \item This is followed by a series of \textbfv{spring cycles}, where each cycle develops an \textbfv{increment} of the system.
-  \item The \textbfv{project closure} phase wraps up the project, completes required documentation such as system hep frames and user manuals and assesses the lessons learned from the project.
+  \item The \textbfv{project closure} phase wraps up the project, completes required documentation such as system hep frames \& user manuals \& assesses the lessons learned from the project.
 \end{enumerate}
 
 \subsection{The SCRUM Process}
@@ -787,12 +787,12 @@ As testing is automated, there is always a set of tests that can be quickly \& e
 \begin{itemize}
   \item \textbfv{Sprints are fixed length, normally 2-4 weeks.} They correspond to the development of a release of the system in XP.
   \item The starting point for \textbfv{planning} is the product backlog, which is the list of work to be done on the project.
-  \item During the \textbfv{assessment phase}, this is reviewed, and priorities and risks are assigned.
-  \item The \textbfv{selection} phase involves all of the project team who work with the customer to select the features and functionality to be developed during the sprint.
+  \item During the \textbfv{assessment phase}, this is reviewed, \& priorities \& risks are assigned.
+  \item The \textbfv{selection} phase involves all of the project team who work with the customer to select the features \& functionality to be developed during the sprint.
   \item Once these are agreed, the team organize themselves \textbfv{develop} the software.
-  \item During this state the team is isolated from teh customer and the organization, with all communication channeled through the so-called \textbfg{'Srum master'}
+  \item During this state the team is isolated from teh customer \& the organization, with all communication channeled through the so-called \textbfg{'Srum master'}
   \item \textg{The role of the Scrum master is to protect the development team from external distractions.}
-  \item At the end of the sprint, the work is \textbfv{reviewed} and presented to stakeholders. The next spring cycle begins.
+  \item At the end of the sprint, the work is \textbfv{reviewed} \& presented to stakeholders. The next spring cycle begins.
 \end{itemize}
 \begin{figure}[H]
 \centering
@@ -801,13 +801,13 @@ As testing is automated, there is always a set of tests that can be quickly \& e
 
 \subsection{SCRUM Benefits}
 \begin{multicols}{2}
-\noindent Rising and Janoff discussed successful use of SCRUM in a telecommunications SDE
+\noindent Rising \& Janoff discussed successful use of SCRUM in a telecommunications SDE
 \begin{itemize}
-  \item The product is broken down into a set of manageable and understandable chunks.
+  \item The product is broken down into a set of manageable \& understandable chunks.
   \item Unstable requirements do not hold up progress.
-  \item The whole team had visibility of everything and consequently team communication is improved.
-  \item Customers see on-time delivery of increments and gain feedback on how the product works.
-  \item Trust between customers and developers is established and a positive culture is created in which everyone expect the project to succeed.
+  \item The whole team had visibility of everything \& consequently team communication is improved.
+  \item Customers see on-time delivery of increments \& gain feedback on how the product works.
+  \item Trust between customers \& developers is established \& a positive culture is created in which everyone expect the project to succeed.
 \end{itemize}
 \vfill\columnbreak
 \begin{figure}[H]
@@ -839,6 +839,39 @@ Rather than being satisfied with users? first explanation of what they want a sy
 \noindent\textbf{Create the user manual first}\newline
 Some organizations have had good success creating their user manuals as a substitute for or supplement to a traditional requirements specification. End users seem to be better able to understand the contents of a user manual than a traditional requirements specification, \& requirements elicitation goes more smoothly
 
+%------------------------------------- Spiral Model ----------------------------------
+
+\renewcommand\thechapter{A2}
+\chapter{Spiral Model}
+\noindent\textbf{Traditional software process models} were \textbf{discouraging more effective approaches} to software development such as prototyping \& software reuse.\newline
+
+\noindent The \textbf{major distinguishing feature} of the spiral model is that it creates a \textbf{risk-driven approach} to the software process rather than a primarily document-driven or code-driven process. It \textbf{incorporates} many of the \textbf{strengths of other models} \& \textbf{resolves} many of their \textbf{difficulties}
+
+\section{Process Model vs Method}
+\noindent The primary functions of a software process model are to \textbf{determine the order of the stages} involved in software development \& evolution \& to establish the transition criteria for progressing from one stage to the next.\newline
+
+\noindent A process model differs from a software method (often called a methodology) in that a method’s primary focus is on \textbf{how to navigate through each phase}
+
+\section{Pursuing Stages in the wrong order}
+\noindent These projects are examples of how \textbf{waterfall model} projects have come to grief by pursuing stages in the wrong order. \textbf{Evolutionary development} projects have come to grief by pursuing stages in the wrong order
+
+\section{Tables became standard}
+\noindent It is also interesting to note that the form of Tables I, 2, \& 3 was originally developed for presentation purposes, but subsequently became a standard \textbf{"spiral model template"} used on later projects.
+
+\section{Benefits}
+\begin{itemize}
+  \item Its \textbf{risk-avoidance} features will generally \textbf{avoid the difficulties} of the other models
+  \item It focuses early \textbf{attention} on options involving the \textbf{reuse of existing software}
+  \item It accommodates preparation for \textbf{life-cycle evolution, growth, \& changes} of the software product
+  \item It provides a mechanism for incorporating \textbf{software quality objectives} into software product development
+  \item It focuses on \textbf{eliminating errors \& unattractive alternatives} early
+  \item For each sources of project activity \& resource expenditure, answers the question, \textbf{"How much is enough?"}
+  \item It \textbf{does not involve separate approaches} for software \textbf{development \& enhancement (or maintenance)}.
+  \item It provides a \textbf{viable framework} for \textbf{integrated hardware-software} system development.
+\end{itemize}
+
+\section{Drawbacks}
+\noindent The three primary challenges involve \textbf{matching to contract software}, \textbf{relying on risk-assessment expertise}, \& the need for \textbf{further elaboration of spiral model steps}.
 
 
 \end{document}

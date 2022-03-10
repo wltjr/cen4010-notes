@@ -1,7 +1,7 @@
 \documentclass{report}
     \title{\textbf{CEN4010 - Notes}}
-    \author{}
-    \date{}
+    \author{William L. Thomson Jr.}
+    \date{Spring Semester 2022}
     \usepackage[tmargin=1in,lmargin=1in,rmargin=1in,bmargin=1in]{geometry}
     \usepackage[dvipsnames]{xcolor}
 	\usepackage{enumitem}
@@ -243,11 +243,18 @@ These are systems that are composed of a number of other software systems.
 %------------------------------------- Requirements Engineering ----------------------------------
 \newpage
 \chapter{Requirements Engineering}
+\section{Requirements Engineering (RE)}
+\noindent Requirements Engineering (RE) is a \textbf{set of activities} concerned with \textbf{identifying \& communicating} the \textbf{purpose} of a software-intensive system, \& the \textbf{contexts} in which it will be used. Hence, RE acts as the bridge between the \textbf{real world needs} of users, customers, \& other \textbf{constituencies} affected by a software system \& the \textbf{capabilities \& opportunities} afforded by software-intensive technologies
+\begin{itemize}
+  \item Discovering stakeholder goals, needs, \& expectations
+  \item Communicating these to system implementers
+\end{itemize}
+
 \section{Requirements}
 \noindent Stake holders needs \& desires\newline
 \textbf{Requirement IEEE Definition:}
   \begin{itemize}
-    \item a condition or capability needed by a user to solve a \textbf{problem} or achieve an objective
+    \item a condition or capability needed by a user to solve a \textbfr{problem} or achieve an objective
     \item a condition or capability that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed document
   \end{itemize}
 A \textbf{problem} is a difference between things as desired \& things as perceived
@@ -274,28 +281,21 @@ A \textbf{problem} is a difference between things as desired \& things as percei
 \end{description}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.45]{assets/CEN4010_Non-Function_Requirements.jpg}
+\includegraphics[scale=.45,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_Non-Function_Requirements.jpg}
 \end{figure}
 
 
 \subsection{The meaning of requirements}
 \begin{description}
-  \item [Domain Properties] Things in the \textbf{application domain} that are true regardless if we ever build  proposed system
-  \item [Requirements] Things in the \textbf{application domain} that we wish to be made true by delivering proposed system\newline
+  \item [Domain Properties] Things in the \textbfr{application domain} that are true regardless if we ever build  proposed system
+  \item [Requirements] Things in the \textbfr{application domain} that we wish to be made true by delivering proposed system\newline
 Many of which will involve phenomena to which the machine has no
 access
-  \item [A Specification] Is a description of the behaviors that the program must have in order to meet the requirements\newline 
+  \item [A Specification] Is a description of the behaviors that the \textbfr{program} must have in order to meet the \textbfr{requirements}\newline 
 Can only be written in terms of shared phenomena!
 \end{description}
 
-\subsection{Requirements Engineering (RE)}
-Requirements Engineering (RE) is a \textbf{set of activities} concerned with \textbf{identifying \& communicating} the \textbf{purpose} of a software-intensive system, \& the \textbf{contexts} in which it will be used. Hence, RE acts as the bridge between the \textbf{real world needs} of users, customers, \& other \textbf{constituencies} affected by a software system \& the \textbf{capabilities \& opportunities} afforded by software-intensive technologies
-\begin{itemize}
-  \item Discovering stakeholder goals, needs, \& expectations
-  \item Communicating these to system implementers
-\end{itemize}
-
-\subsubsection{Importance of RE}
+\section{Importance of RE}
 \textbf{Problems}
 \begin{itemize}
   \item Increased reliance on software
@@ -309,8 +309,75 @@ Requirements Engineering (RE) is a \textbf{set of activities} concerned with \te
   \item Changing requirements
 \end{itemize}
 
-\newpage
-%\subsection{The Requirements Engineering Process}
+\section{The Requirements Engineering Process}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.45,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_RE_Process.jpg}
+\end{figure}
+
+\subsection{Feasibility Studies}
+\begin{itemize}
+  \item A feasibility study decides whether or not the proposed
+system is worthwhile.
+  \item A short focused study that checks
+  \begin{itemize}
+    \item If the system contributes to organizational objectives
+    \item If the system can be engineered using current technology and within budget
+    \item If the system can be integrated with other systems that are used
+  \end{itemize}
+\end{itemize}
+
+\subsection{Elicitation and analysis}
+\begin{itemize}
+  \item Involves technical staff working with customers to find out about the application domain, the
+services that the system should provide and the system?s operational constraints.
+  \item May involve stakeholders: end-users, managers, engineers involved in maintenance, domain experts, trade unions, etc.
+\end{itemize}
+\textbfr{Problems}
+\begin{itemize}
+  \item Stakeholders don't know what they really want.
+  \item Stakeholders express requirements in their own terms.
+  \item Different stakeholders may have conflicting requirements.
+  \item Organizational and political factors may influence the system requirements.
+  \item The requirements change during the analysis process; new stakeholders emerge, business env change.
+\end{itemize}
+
+\subsection{Requirements Document Structure - SRS Document}
+\begin{itemize}
+  \item Introduction
+  \item Glossary
+  \item User requirements definition
+  \item System architecture
+  \item System requirements specification
+  \item System models
+  \item System evolution
+  \item Appendices
+  \item Index
+\end{itemize}
+
+\subsection{Requirements validation}
+\begin{itemize}
+  \item Concerned with demonstrating that the requirements define the system that the customer really wants.
+  \item Requirements error costs are high so validation is very important
+  \begin{itemize}
+    \item Fixing requirements error after delivery may cost 100 times the cost of fixing an implementation error.
+  \end{itemize}
+\end{itemize}
+  
+
+\subsection{Requirements checking}
+\begin{description}[style=multiline,leftmargin=8em]
+  \item [\textr{Validity}] Does the system provide the functions which best support
+the customer's needs?
+  \item [\textr{Consistency}] Are there any requirements conflicts?
+  \item [\textr{Completeness}] Are all functions required by the customer included?
+  \item [\textr{Realism}] Can the requirements be implemented given available budget
+and technology
+  \item [\textr{Verifiability}] Can the requirements be checked?
+\end{description}
+
+
+
 \chapter{Software Processes}
 \section{The Software Process}
 A structured set of activities required to develop a software system.\newline

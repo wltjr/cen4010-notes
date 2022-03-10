@@ -286,20 +286,22 @@ A \textbf{problem} is a difference between things as desired \& things as percei
 
 
 \subsection{The meaning of requirements}
-\begin{description}
+\begin{description}[style=multiline,leftmargin=9.5em]
   \item [Domain Properties] Things in the \textbfr{application domain} that are true regardless if we ever build  proposed system
-  \item [Requirements] Things in the \textbfr{application domain} that we wish to be made true by delivering proposed system\newline
+  \item [Requirements] Things in the \textbfr{application domain} we wish to be made true by delivering proposed system\newline
 Many of which will involve phenomena to which the machine has no
 access
-  \item [A Specification] Is a description of the behaviors that the \textbfr{program} must have in order to meet the \textbfr{requirements}\newline 
+  \item [A Specification] Description of behaviors that the \textbfr{program} must have in order to meet the \textbfr{requirements}\newline 
 Can only be written in terms of shared phenomena!
 \end{description}
 
 \section{Importance of RE}
+\vspace{-1em}
+\begin{multicols}{2}
 \textbf{Problems}
 \begin{itemize}
   \item Increased reliance on software
-  \item Software now the biggest cost element for mission critical systems
+  \item Software biggest cost for mission critical systems
   \item Wastage on failed projects
 \end{itemize}
 \textbf{Key Factors}
@@ -308,13 +310,14 @@ Can only be written in terms of shared phenomena!
   \item Re-work from defect removal
   \item Changing requirements
 \end{itemize}
+\end{multicols}
 
-\section{The Requirements Engineering Process}
+\section{Requirements Engineering Process}
+\begin{multicols}{2}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.45,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_RE_Process.jpg}
+\includegraphics[scale=.3,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_RE_Process.jpg}
 \end{figure}
-
 \subsection{Feasibility Studies}
 \begin{itemize}
   \item A feasibility study decides whether or not the proposed
@@ -326,7 +329,9 @@ system is worthwhile.
     \item If the system can be integrated with other systems that are used
   \end{itemize}
 \end{itemize}
+\end{multicols}
 
+\vspace{-2em}
 \subsection{Elicitation \& analysis}
 \begin{itemize}
   \item Involves technical staff working with customers to find out about the application domain, the
@@ -342,7 +347,33 @@ services that the system should provide \& the system's operational constraints.
   \item The requirements change during the analysis process; new stakeholders emerge, business env change.
 \end{itemize}
 
-\subsection{Requirements Document Structure - SRS Document}
+\begin{multicols}{2}
+\subsection{Requirements validation}
+\begin{itemize}
+  \item Concerned with demonstrating that requirements define the system that the customer really wants.
+  \item Requirements error costs are high so validation is very important
+  \begin{itemize}
+    \item Fixing requirements error after delivery may cost 100 times the cost of fixing an implementation error.
+  \end{itemize}
+\end{itemize}
+  
+\subsection{Requirements checking}
+\begin{description}[style=multiline,leftmargin=7em]
+  \item [\textr{Validity}] Does system provide functions which best support
+the customer's needs?
+  \item [\textr{Consistency}] Are there any requirements conflicts?
+  \item [\textr{Completeness}] Are all functions required included?
+  \item [\textr{Realism}] Can the requirements be implemented given available budget
+\& technology
+  \item [\textr{Verifiability}] Can the requirements be checked?
+\end{description}
+\end{multicols}
+
+\begin{multicols}{2}
+\subsection{SRS Document Goal}
+\noindent The Software Requirements Specification document goal is to serve as a \textbf{template for development}, a low/high level design can be used to understand the system for implementation, enhancement, changes, maintenance, etc.\newline
+\vfill\columnbreak
+\subsection{SRS Document Structure}
 \begin{itemize}
   \item Introduction
   \item Glossary
@@ -354,27 +385,7 @@ services that the system should provide \& the system's operational constraints.
   \item Appendices
   \item Index
 \end{itemize}
-
-\subsection{Requirements validation}
-\begin{itemize}
-  \item Concerned with demonstrating that the requirements define the system that the customer really wants.
-  \item Requirements error costs are high so validation is very important
-  \begin{itemize}
-    \item Fixing requirements error after delivery may cost 100 times the cost of fixing an implementation error.
-  \end{itemize}
-\end{itemize}
-  
-
-\subsection{Requirements checking}
-\begin{description}[style=multiline,leftmargin=8em]
-  \item [\textr{Validity}] Does the system provide the functions which best support
-the customer's needs?
-  \item [\textr{Consistency}] Are there any requirements conflicts?
-  \item [\textr{Completeness}] Are all functions required by the customer included?
-  \item [\textr{Realism}] Can the requirements be implemented given available budget
-\& technology
-  \item [\textr{Verifiability}] Can the requirements be checked?
-\end{description}
+\end{multicols}
 
 
 

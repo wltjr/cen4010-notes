@@ -42,8 +42,10 @@
     \newcommand{\comment}[1]{}
     \newcommand{\textr}[1]{\textcolor{red}{#1}}
     \newcommand{\textg}[1]{\textcolor{ForestGreen}{#1}}
+    \newcommand{\textv}[1]{\textcolor{violet}{#1}}
     \newcommand{\textbfr}[1]{\textbf{\textr{#1}}}
     \newcommand{\textbfg}[1]{\textbf{\textg{#1}}}
+    \newcommand{\textbfv}[1]{\textbf{\textv{#1}}}
 \begin{document}
 
 \maketitle
@@ -689,17 +691,64 @@ As testing is automated, there is always a set of tests that can be quickly \& e
   \item Incomplete tests - do not check for all possible exceptions that may occur
   \item Some tests can be very difficult to write incrementally
   \item It is difficult to judge the completeness of a set of tests
+  \item It supports the idea of collective ownership \& responsibility for the system.
+  \item It acts as an informal review process because each line of code is looked at by at least two people.
+  \item It helps support refactoring, which is a process of software improvement.
 \end{itemize}
 
 \section{Pair Programming}
 \noindent In XP, programmers work in pairs, sitting together to develop code. This helps develop a common ownership of code \& spreads knowledge across the team. It serves as an informal review process as each line of code is looked at by more than 1 person. It encourages refactoring as the whole team an benefit from this. Measurements suggest that development productivity with pair programming is similar to that of two people working independently.
 
-\subsection{XP Testing difficulties}
+\newpage
+\section{SCRUM}
+\noindent The SCRUM approach is a general agile method but its focus is on managing iterative development rather than specific agile practices. These are three phases in scrum.
+\begin{multicols}{2}
+\begin{enumerate}
+  \item The initial phase is an \textbfv{outline planning phase} where you establish the general objectives for the project and \textbfv{design the software architecture}.
+  \item This is followed by a series of \textbfv{spring cycles}, where each cycle develops an \textbfv{increment} of the system.
+  \item The \textbfv{project closure} phase wraps up the project, completes required documentation such as system hep frames and user manuals and assesses the lessons learned from the project.
+\end{enumerate}
+
+\subsection{The SCRUM Process}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_Scrum_Process.jpg}
+\end{figure}
+\end{multicols}
+
+\subsection{The SCRUM Sprint Cycle}
 \begin{itemize}
-  \item It supports the idea of collective ownership \& responsibility for the system.
-  \item It acts as an informal review process because each line of code is looked at by at least two people.
-  \item It helps support refactoring, which is a process of software improvement.
+  \item \textbfv{Sprints are fixed length, normally 2-4 weeks.} They correspond to the development of a release of the system in XP.
+  \item The starting point for \textbfv{planning} is the product backlog, which is the list of work to be done on the project.
+  \item During the \textbfv{assessment phase}, this is reviewed, and priorities and risks are assigned.
+  \item The \textbfv{selection} phase involves all of the project team who work with the customer to select the features and functionality to be developed during the sprint.
+  \item Once these are agreed, the team organize themselves \textbfv{develop} the software.
+  \item During this state the team is isolated from teh customer and the organization, with all communication channeled through the so-called \textbfg{'Srum master'}
+  \item \textg{The role of the Scrum master is to protect the development team from external distractions.}
+  \item At the end of the sprint, the work is \textbfv{reviewed} and presented to stakeholders. The next spring cycle begins.
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_Scrum_Overview.jpg}
+\end{figure}
+
+\subsection{SCRUM Benefits}
+\begin{multicols}{2}
+\noindent Rising and Janoff discussed successful use of SCRUM in a telecommunications SDE
+\begin{itemize}
+  \item The product is broken down into a set of manageable and understandable chunks.
+  \item Unstable requirements do not hold up progress.
+  \item The whole team had visibility of everything and consequently team communication is improved.
+  \item Customers see on-time delivery of increments and gain feedback on how the product works.
+  \item Trust between customers and developers is established and a positive culture is created in which everyone expect the project to succeed.
+\end{itemize}
+\vfill\columnbreak
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4,trim=1cm 1cm 1cm 1cm]{assets/CEN4010_Scrum_Cycle.jpg}
+\end{figure}
+\end{multicols}
+
 
 %------------------------------------- An Ounce of Prevention ----------------------------------
 
